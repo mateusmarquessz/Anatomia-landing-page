@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Digestorio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema Digestório</title>
 </head>
-<body>
-    
+
+<body class="bg-gray-50 text-gray-800 transition-colors duration-500">
+
+    <!-- HEADER -->
+    <header class="bg-green-600 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Sistema Digestório</h1>
+
+            <button id="darkToggle" class="px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition">
+                🌙 Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-6xl mx-auto px-6 py-12">
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Sobre o Sistema Digestório</h2>
+            <p class="text-gray-700">
+                O sistema digestório é responsável pela digestão,
+                absorção de nutrientes e eliminação de resíduos.
+            </p>
+        </section>
+
+        <!-- CARDS -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-6">Doenças do Sistema Digestório</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flip-card h-64 fade-up">
+                    <div class="flip-card-inner w-full h-full relative">
+                        <div
+                            class="flip-card-front absolute inset-0 bg-white text-gray-800 rounded-xl shadow-md p-6 border border-gray-200 flex flex-col justify-center transition-colors">
+                            <h3 class="text-2xl font-bold text-red-600 mb-3">Gastrite</h3>
+                            <p>
+                                Inflamação da mucosa do estômago causada por estresse
+                                e má alimentação.
+                            </p>
+                        </div>
+                        <div
+                            class="flip-card-back absolute inset-0 bg-green-600 text-white rounded-xl shadow-md p-6 flex flex-col justify-center transition-colors">
+                            <h4 class="text-2xl font-bold mb-3">Tratamento</h4>
+                            <p>
+                                Medicamentos, dieta equilibrada
+                                e acompanhamento médico.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flip-card h-64 fade-up">
+                    <div class="flip-card-inner w-full h-full relative">
+
+                        <div
+                            class="flip-card-front absolute inset-0 bg-white text-gray-800 rounded-xl shadow-md p-6 border border-gray-200 flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-red-600 mb-3">Refluxo</h3>
+                            <p>
+                                Retorno do conteúdo gástrico para o esôfago,
+                                causando azia e queimação.
+                            </p>
+                        </div>
+
+                        <div
+                            class="flip-card-back absolute inset-0 bg-green-600 text-white rounded-xl shadow-md p-6 flex flex-col justify-center">
+                            <h4 class="text-2xl font-bold mb-3">Tratamento</h4>
+                            <p>
+                                Mudança de hábitos alimentares
+                                e uso de antiácidos.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flip-card h-64 fade-up">
+                    <div class="flip-card-inner w-full h-full relative">
+
+                        <div
+                            class="flip-card-front absolute inset-0 bg-white text-gray-800 rounded-xl shadow-md p-6 border border-gray-200 flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-red-600 mb-3">Constipação</h3>
+                            <p>
+                                Dificuldade para evacuar causada por
+                                baixa ingestão de fibras.
+                            </p>
+                        </div>
+
+                        <div
+                            class="flip-card-back absolute inset-0 bg-green-600 text-white rounded-xl shadow-md p-6 flex flex-col justify-center">
+                            <h4 class="text-2xl font-bold mb-3">Tratamento</h4>
+                            <p>
+                                Alimentação rica em fibras, água
+                                e exercícios físicos.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-200 text-gray-600">
+        <div class="max-w-6xl mx-auto px-6 py-4 text-center">
+            © 2026 — Trabalho de Anatomia
+        </div>
+    </footer>
+
+    <!-- DARK MODE SCRIPT -->
+    <script>
+        const button = document.getElementById("darkToggle");
+        const body = document.body;
+
+        button.addEventListener("click", () => {
+            body.classList.toggle("bg-gray-50");
+            body.classList.toggle("bg-gray-900");
+            body.classList.toggle("text-gray-800");
+            body.classList.toggle("text-gray-100");
+
+            document.querySelectorAll(".flip-card-front").forEach(card => {
+                card.classList.toggle("bg-white");
+                card.classList.toggle("bg-gray-800");
+                card.classList.toggle("text-gray-800");
+                card.classList.toggle("text-gray-100");
+            });
+
+            document.querySelectorAll(".flip-card-back").forEach(card => {
+                card.classList.toggle("bg-green-600");
+                card.classList.toggle("bg-green-700");
+            });
+
+            document.querySelector("footer").classList.toggle("bg-gray-200");
+            document.querySelector("footer").classList.toggle("bg-gray-800");
+            document.querySelector("footer").classList.toggle("text-gray-600");
+            document.querySelector("footer").classList.toggle("text-gray-300");
+        });
+    </script>
+
 </body>
+
 </html>
