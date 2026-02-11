@@ -16,50 +16,57 @@
 
     <!-- HEADER -->
     <header class="fixed top-0 left-0 w-full z-50 bg-[#F9F9F9] border-b border-gray-200">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-        <div class="flex items-center gap-3 text-gray-800">
-            <img src="img/tocha.png" alt="Logo" class="w-10 h-10 object-contain">
-            <div class="flex flex-col leading-tight">
-                <span class="text-xl font-bold tracking-tight text-gray-800">Sistema Digestório</span>
-                <span class="text-xs font-medium text-orange-500 uppercase tracking-wider">Educação e Saúde</span>
+            <div class="flex items-center gap-3 text-gray-800">
+                <img src="img/tocha.png" alt="Logo" class="w-10 h-10 object-contain">
+                <div class="flex flex-col leading-tight">
+                    <span class="text-xl font-bold tracking-tight text-gray-800">Sistema Digestório</span>
+                    <span class="text-xs font-medium text-orange-500 uppercase tracking-wider">Educação e Saúde</span>
+                </div>
             </div>
+
+            <nav class="hidden md:flex items-center gap-8 text-gray-800">
+                <a href="#principal"
+                    class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
+                    Início
+                </a>
+                <a href="#doencas"
+                    class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
+                    Doenças
+                </a>
+                <a href="#faq"
+                    class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
+                    FAQ
+                </a>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
 
-        <nav class="hidden md:flex items-center gap-8 text-gray-800">
-            <a href="#principal" class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
-                Início
-            </a>
-            <a href="#doencas" class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
-                Doenças
-            </a>
-            <a href="#faq" class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
-                FAQ
-            </a>
-        </nav>
-
-        <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none p-2">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
-
-    <div id="mobile-menu" 
-     class="md:hidden bg-[#F9F9F9] border-t border-gray-100 px-6 overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
-    <div class="py-6 flex flex-col gap-6">
-        <a href="#principal" class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
-            Início
-        </a>
-        <a href="#doencas" class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
-            Doenças
-        </a>
-        <a href="#faq" class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
-            FAQ
-        </a>
-    </div>
-</div>
-</header>
+        <div id="mobile-menu"
+            class="md:hidden bg-[#F9F9F9] border-t border-gray-100 px-6 overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
+            <div class="py-6 flex flex-col gap-6">
+                <a href="#principal"
+                    class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
+                    Início
+                </a>
+                <a href="#doencas"
+                    class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
+                    Doenças
+                </a>
+                <a href="#faq"
+                    class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
+                    FAQ
+                </a>
+            </div>
+        </div>
+    </header>
 
     <section id="principal"
         class="relative min-h-screen flex flex-col items-center text-center px-6 pt-20 sm:pt-24 md:pt-32">
@@ -140,7 +147,7 @@
                 <!-- REFLUXO -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Refluxo Gastroesofágico" data-tag="Esôfago"
-                    data-image="https://drluizgustavooliveira.com.br/wp-content/uploads/2018/09/2445_blog_Refluxo-Luiz_original.jpg"
+                    data-image="https://i.ibb.co/zc0SMVZ/2445-blog-Refluxo-Luiz-original.jpg"
                     data-description="O Refluxo Gastrointestinal é uma condição que atinge cerca de 10 a 20% da população, consistindo no retorno do conteúdo gástrico do estômago para o esôfago. Entre o estômago e o esôfago há uma espécie de válvula, onde um anel de músculos conhecidos como esfíncter esofágico inferior impedem o retorno desse conteúdo gástrico. Quando se há algum defeito ou problema associado há esses anéis musculares, o conteúdo gástrico ácido e enzimático retorna ao esôfago, no qual sofre danos e irritabilidade em sua mucosa, assim como em órgãos adjacentes. Devido a gravidade, é mais comum o aparecimento de sintomas quando o paciente está deitado."
                     data-prognostic="Azia (Pirose) - Queimação na área do tórax|Desconforto torácico|Regurgitação com dor na garganta|Asma|Tosse persistente"
                     data-treatment="Perda de peso|Alcoolismo|Tabagismo|Atividade física regular|Evitar se alimentar 3 horas antes de dormir|Elevação da cabeceira da cama em 15cm|Alimentação equilibrada e sem excessos, principalmente com cafeína, bebidas ácidas ou gaseificadas e comidas gordurosas|Dormi virado do lado esquerdo
@@ -175,7 +182,7 @@
                 <!-- GASTRITE -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Gastrite" data-tag="Estômago"
-                    data-image="https://www.mundoboaforma.com.br/wp-content/uploads/2022/04/gastrite.webp"
+                    data-image="https://img.freepik.com/vetores-premium/personagem-do-estomago-dor-no-estomago-queimacao-nos-desenhos-animados-orgaos-internos-gastrite-e-inflamacao_502320-722.jpg"
                     data-description="A gastrite consiste na inflamação da mucosa gástrica presente no estômago, sendo causada por diversos fatores, como infecções, estresse, lesões no estômago, abuso de bebidas alcoólicas, uso de medicamentos ou distúrbios. Ela pode se manifestar de forma aguda, quando ocorre subitamente, ou de forma crônica, quando persiste por longos períodos de tempo. A inflamação pode apresentar diferentes graus de intensidade e atingir o estômago em sua totalidade ou apenas em algumas partes.
                     A gastrite infecciosa é a forma mais comum e é decorrente da bactéria Helicobacter pylori. Além disso, também há ocorrências de gastrite provocadas por lesões fora do estômago, como queimaduras extensas na pele, lesões cranianas, lesões que causam hemorragia ou outras doenças graves."
                     data-prognostic="Dores e desconforto abdominal|Náusea (enjoos), podendo ser intermitente ou não|Vômito, podendo ser intermitente ou não indigestão|Perda de apetite|Inchaço abdominal
@@ -210,7 +217,8 @@
                 <!-- DISENTERIA -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Disenteria" data-tag="Intestino"
-                    data-image="https://images.unsplash.com/photo-1580281657521-3a1b6d7a44cc" data-description="Disenteria é uma doença gastrointestinal em que ocorrem episódios diarreicos com presença de sangue, muco e pus, normalmente associado com febre, podendo até ser assintomático ( sem apresentar sintomas ) . As causas mais comuns para disenteria são de origem infecciosa bacteriana ou amebiana, normalmente da ingestão de alimentos e líquidos contaminados, devido a falta da higiene adequada ou ausência de saneamento básico. Outras doenças, como a Síndrome do intestino irritável ou intolerâncias alimentares, também podem desencadear quadros semelhantes à disenteria. 
+                    data-image="https://img.freepik.com/vetores-gratis/homem-tendo-dor-de-estomago-com-bacterias_1308-73361.jpg?semt=ais_hybrid&w=740&q=80"
+                    data-description="Disenteria é uma doença gastrointestinal em que ocorrem episódios diarreicos com presença de sangue, muco e pus, normalmente associado com febre, podendo até ser assintomático ( sem apresentar sintomas ) . As causas mais comuns para disenteria são de origem infecciosa bacteriana ou amebiana, normalmente da ingestão de alimentos e líquidos contaminados, devido a falta da higiene adequada ou ausência de saneamento básico. Outras doenças, como a Síndrome do intestino irritável ou intolerâncias alimentares, também podem desencadear quadros semelhantes à disenteria. 
 " data-prognostic="Presença de sangue nas fezes|Sintomas associadas com desidratação, como boca seca, pele seca e ausência de  lágrimas|Perda de apetite|Dores abdominais|Febre alta ( comum em disenteria bacteriana )|Náusea ( Enjoo ) e Vômito|Perda de peso
 
 " data-treatment="Cuidados com a higiene, sempre lavando as mãos antes e após defecar|Evitar alimentos e bebidas que possam estar contaminados. Sempre lavar frutas e ferver adequadamente os alimentos|Tomar medidas preventivas em corpos de água passíveis de contaminação|Se atentar ao estado do saneamento básico no local de moradia ou em viagens|Cuidado com o compartilhamento de itens de cunho pessoal, como escova de dentes.">
@@ -244,7 +252,7 @@
                 <!-- VIROSE INTESTINAL -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Virose Intestinal" data-tag="Estômago e Intestino"
-                    data-image="https://dranataliamilioligastro.com.br/wp-content/uploads/2024/01/2-1.png"
+                    data-image="https://institutoagf.com.br/wp-content/uploads/2025/01/virose_gastro.jpg"
                     data-description="A virose gastrointestinal é uma infecção viral que afeta o sistema digestivo, principalmente o estômago e os intestinos. Diferente de infecções bacterianas, a virose gastrointestinal costuma ter sintomas de forma mais leve e uma diarreia líquida, sem a presença de sangue. Seus sintomas perduram poucos dias e a recuperação tende a ser natural. Em alguns casos, o agravamento dos sintomas e a persistência desses por mais de uma semana indica a necessidade de um tratamento médico. Norovírus, Rotavírus e o adenovirus são os principais causadores dessas infecções, que são transmitidas em alimentos contaminados e contato próximo com pessoas contaminadas. O ideal é a prevenção, haja vista que não há muito a se fazer no tratamento, exceto tratar os sintomas, a desidratação e garantir o repouso do paciente. Crianças, idosos e indivíduos com o sistema imunológico comprometido são grupos de risco e devem buscar auxílio médico o mais breve possível. 
 " data-prognostic="Náusea ( Enjoo ) e vômito|Diarreia líquida sem presença de sangue|Febre baixa e calafrios|Mau-estar geral|Dores abdominais|Sensação de cansaço extrema|Muito com ser assintomático ( sem presença de sintomas )"
                     data-treatment="Higiene básica, como lavar as mãos|Caderneta de vacinação em dia, principalmente para as crianças|Higiene na preparação de alimentos| Mantenha distância de indivíduos infectados e desinfecte superfícies em que estiveram  em contato com o vírus| Evite compartilhar itens de uso pessoal|Cuidados de higiene e planejamento de viagens a locais em que possa haver  a contaminação de vírus, seja por alimento, seja por ocorrências locais.">
@@ -278,7 +286,7 @@
                 <!-- HÉRNIA ABDOMINAL -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Hérnia Abdominal" data-tag="Parede Abdominal"
-                    data-image="https://images.unsplash.com/photo-1550831107-1553da8c8464"
+                    data-image="https://media.istockphoto.com/id/1436983773/pt/vetorial/umbilical-hernia-cross-section-of-abdomen-with-small-intestine.jpg?s=612x612&w=0&k=20&c=-YV5mNB37_nGCYkx68JK3TGHK95eue2XW9ky-C9QozQ="
                     data-description="Hérnia abdominal é uma protusão de conteúdo abdominal em locais de fraqueza da parede protetora dos órgãos internos do abdômen, seja devido a fraqueza no tecido mucoso ou muscular. Essa protusão muitas vezes é imperceptível, exceto quando se faz certos movimentos ou atividades diárias, como tossir, no qual essa protrusão se torna visível como uma protuberância . Existem diversos tipos de hérnias abdominais, sendo a mais comum a hérnia inguinal, no qual afeta apenas homens e essa protusão ocorre logo acima do ligamento inguinal. É comum indivíduos que praticam esportes relatarem protuberâncias similares a hérnias, devido a localização, mas o motivo da protuberância é diferente. A hérnia é comum em pacientes acima do peso, constipação crônica, emprego que depende se manter em pé ou com elevação de peso, gravidez ou defeito congênito."
                     data-prognostic="Inchaço na área|Dor continua ou intermitente" data-treatment="* Cuidados pós-cirúrgicos|Alimentação adequada e equilibrada|Controle do peso|Exercícios físicos regulares|Evitar esforços excessivos, principalmente ocupacionais|Controle postural
 ">
@@ -744,26 +752,40 @@
         </div>
     </footer>
 
-    <div id="modalOverlay" class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 hidden">
+    <div id="modalOverlay" class="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-2xl max-w-2xl w-full mx-4 relative flex flex-col max-h-[90vh]">
 
-        <div class="bg-white rounded-2xl max-w-2xl w-full mx-4 relative animate-fadeIn max-h-[90vh] overflow-y-auto">
-            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl">✕</button>
+            <button id="closeModal"
+                class="absolute top-4 right-4 z-20 bg-white/80 rounded-full p-1 hover:bg-white text-gray-800">✕</button>
 
-            <div class="p-4 sm:p-6 md:p-8">
-                <h2 id="modalTitle" class="text-xl sm:text-2xl font-bold mb-2"></h2>
+            <div class="overflow-y-auto p-6 sm:p-8">
+                <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
                 <span id="modalTag"
-                    class="inline-block text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full mb-6"></span>
-                <img id="modalImage" class="w-full h-40 sm:h-48 md:h-56 object-cover rounded-xl mb-6" />
-                <h4 class="text-sm font-semibold text-green-700 mb-2">O QUE É</h4>
-                <p id="modalDescription" class="text-gray-600 text-sm mb-6"></p>
-                <h4 class="text-sm font-semibold text-green-700 mb-2">Sintomas</h4>
-                <ul id="modalPrognostic" class="text-gray-600 text-sm list-disc pl-5 space-y-1 mb-6"></ul>
-                <h4 class="text-sm font-semibold text-green-700 mb-2">PREVENÇÃO</h4>
-                <ul id="modalTreatment" class="text-gray-600 text-sm list-disc pl-5 space-y-1"></ul>
+                    class="inline-block text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full mb-6"></span>
+
+                <div class="w-full mb-6 overflow-hidden rounded-xl bg-gray-100">
+                    <img id="modalImage" class="w-full h-auto max-h-[300px] object-cover" />
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-green-700 mb-2">O QUE É</h4>
+                        <p id="modalDescription" class="text-gray-600 text-sm leading-relaxed"></p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-semibold text-green-700 mb-2">SINTOMAS</h4>
+                        <ul id="modalPrognostic" class="text-gray-600 text-sm list-disc pl-5 space-y-1"></ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-semibold text-green-700 mb-2">PREVENÇÃO</h4>
+                        <ul id="modalTreatment" class="text-gray-600 text-sm list-disc pl-5 space-y-1"></ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 
 </body>
 <script src="script.js"></script>
