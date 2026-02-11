@@ -15,102 +15,104 @@
 <body class="scroll-smooth bg-gray-50 text-gray-800 transition-colors duration-500">
 
     <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full z-20  bg-[#F9F9F9] border-b border-gray-200">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#F9F9F9] border-b border-gray-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-            <!-- Logo -->
-            <div class="flex items-center gap-3 text-gray-800">
-                <!-- Imagem -->
-                <img src="img/tocha.png" alt="Logo Sistema Digestório" class="w-10 h-10 object-contain">
-
-                <!-- Textos -->
-                <div class="flex flex-col leading-tight">
-                    <span class="text-xl font-bold">Sistema Digestório</span>
-                    <span class="text-sm opacity-80">Educação e Saúde</span>
-                </div>
+        <div class="flex items-center gap-3 text-gray-800">
+            <img src="img/tocha.png" alt="Logo" class="w-10 h-10 object-contain">
+            <div class="flex flex-col leading-tight">
+                <span class="text-xl font-bold tracking-tight text-gray-800">Sistema Digestório</span>
+                <span class="text-xs font-medium text-orange-500 uppercase tracking-wider">Educação e Saúde</span>
             </div>
-
-            <!-- Nav -->
-            <nav class="hidden md:flex items-center gap-8 text-gray-800">
-                <nav class="hidden md:flex items-center gap-8 text-gray-800">
-                    <a href="#principal" class="relative text-gray-800 transition-colors duration-300
-          hover:text-orange-400
-          after:content-['']
-          after:absolute after:left-0 after:-bottom-1
-          after:h-[2px] after:w-0
-          after:bg-gradient-to-r after:from-orange-400 after:to-red-500
-          after:transition-all after:duration-300
-          hover:after:w-full">
-                        Início
-                    </a>
-
-                    <a href="#doencas" class="relative text-gray-800 transition-colors duration-300
-          hover:text-orange-400
-          after:content-['']
-          after:absolute after:left-0 after:-bottom-1
-          after:h-[2px] after:w-0
-          after:bg-gradient-to-r after:from-orange-400 after:to-red-500
-          after:transition-all after:duration-300
-          hover:after:w-full">
-                        Doenças
-                    </a>
-
-                    <a href="#faq" class="relative text-gray-800 transition-colors duration-300
-          hover:text-orange-400
-          after:content-['']
-          after:absolute after:left-0 after:-bottom-1
-          after:h-[2px] after:w-0
-          after:bg-gradient-to-r after:from-orange-400 after:to-red-500
-          after:transition-all after:duration-300
-          hover:after:w-full">
-                        FAQ
-                    </a>
-                </nav>
-
-            </nav>
         </div>
-    </header>
 
-    <section id="principal" class="scroll-mt-24 relative min-h-screen flex items-center justify-center text-center px-6"
-        style="background-image: url('https://images.unsplash.com/photo-1540420773420-3366772f4999'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="relative max-w-3xl text-white">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-                Doenças do <span class="text-orange-400">Sistema Digestório</span><br />
-                Explicadas de Forma Simples
+        <nav class="hidden md:flex items-center gap-8 text-gray-800">
+            <a href="#principal" class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
+                Início
+            </a>
+            <a href="#doencas" class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
+                Doenças
+            </a>
+            <a href="#faq" class="relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full">
+                FAQ
+            </a>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none p-2">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" 
+     class="md:hidden bg-[#F9F9F9] border-t border-gray-100 px-6 overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
+    <div class="py-6 flex flex-col gap-6">
+        <a href="#principal" class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
+            Início
+        </a>
+        <a href="#doencas" class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
+            Doenças
+        </a>
+        <a href="#faq" class="w-fit relative text-gray-800 transition-colors duration-300 hover:text-orange-400 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-orange-400 after:to-red-500 after:transition-all after:duration-300 hover:after:w-full font-medium">
+            FAQ
+        </a>
+    </div>
+</div>
+</header>
+
+    <section id="principal"
+        class="relative min-h-screen flex flex-col items-center text-center px-6 pt-20 sm:pt-24 md:pt-32">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999" alt="Background"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="relative z-10 max-w-3xl text-white">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
+                Doenças do <span class="text-orange-400 bg-clip-text">Sistema Digestório</span><br />
+                <span class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light">Explicadas de forma
+                    simples.</span>
             </h1>
 
-            <p class="text-base md:text-lg opacity-90 mb-8">
-                O sistema digestório é responsável por processar os alimentos que consumimos,
-                extraindo nutrientes essenciais para o funcionamento do nosso corpo.
-                Conhecer as principais doenças que podem afetá-lo é fundamental para manter
-                uma vida saudável e prevenir complicações.
+            <p class="text-base sm:text-lg md:text-xl opacity-90 mb-10 leading-relaxed max-w-2xl mx-auto">
+                O sistema digestório processa o que consumimos e extrai nutrientes essenciais.
+                Conhecer os sinais do seu corpo é o primeiro passo para uma vida longa e saudável.
             </p>
 
-            <a href="#doencas"
-                class="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
-                ❤️ Explorar Doenças mais comuns
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#doencas"
+                    class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg">
+                    ❤️ Explorar Doenças
+                </a>
+                <a href="#faq"
+                    class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur hover:bg-white/20 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all border border-white/30">
+                    Saiba Mais
+                </a>
+            </div>
         </div>
 
-        <!-- Stats Cards -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-4xl px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                <div class="bg-black/60 backdrop-blur text-white p-6 rounded-xl">
-                    <h3 class="text-3xl font-bold mb-2">70%</h3>
-                    <p class="text-sm opacity-90">
-                        das pessoas apresentam algum sintoma digestivo ao longo da vida
-                    </p>
-                </div>
-
-                <div class="bg-black/60 backdrop-blur text-white p-6 rounded-xl">
-                    <h3 class="text-3xl font-bold mb-2">+15</h3>
-                    <p class="text-sm opacity-90">
-                        doenças comuns do sistema digestório podem ser prevenidas com hábitos saudáveis
-                    </p>
-                </div>
+        <!-- Cards Informativos -->
+        <div class="relative z-10 w-full max-w-5xl px-6 sm:px-0 grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
+            <div
+                class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-colors">
+                <h3 class="text-3xl sm:text-4xl font-black text-orange-400 mb-1">70%</h3>
+                <p class="text-sm sm:text-base font-medium text-gray-100">
+                    da população apresenta algum sintoma digestivo ao longo da vida.
+                </p>
             </div>
+
+            <div
+                class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-colors">
+                <h3 class="text-3xl sm:text-4xl font-black text-orange-400 mb-1">+15</h3>
+                <p class="text-sm sm:text-base font-medium text-gray-100">
+                    condições comuns que podem ser evitadas com bons hábitos alimentares.
+                </p>
+            </div>
+        </div>
     </section>
 
     <section id="doencas" class="scroll-mt-24 bg-[#fafafa] py-24">
@@ -138,12 +140,14 @@
                 <!-- REFLUXO -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Refluxo Gastroesofágico" data-tag="Esôfago"
-                    data-image="https://images.unsplash.com/photo-1542736667-069246bdbc6d"
-                    data-description="Condição caracterizada pelo retorno do conteúdo gástrico do estômago para o esôfago devido ao mau funcionamento do esfíncter esofágico inferior, causando irritação da mucosa."
-                    data-treatment="Tratamento clínico e comportamental com medicamentos anti-secretores, perda de peso, elevação da cabeceira da cama, evitar álcool, tabagismo e refeições antes de dormir.">
+                    data-image="https://drluizgustavooliveira.com.br/wp-content/uploads/2018/09/2445_blog_Refluxo-Luiz_original.jpg"
+                    data-description="O Refluxo Gastrointestinal é uma condição que atinge cerca de 10 a 20% da população, consistindo no retorno do conteúdo gástrico do estômago para o esôfago. Entre o estômago e o esôfago há uma espécie de válvula, onde um anel de músculos conhecidos como esfíncter esofágico inferior impedem o retorno desse conteúdo gástrico. Quando se há algum defeito ou problema associado há esses anéis musculares, o conteúdo gástrico ácido e enzimático retorna ao esôfago, no qual sofre danos e irritabilidade em sua mucosa, assim como em órgãos adjacentes. Devido a gravidade, é mais comum o aparecimento de sintomas quando o paciente está deitado."
+                    data-prognostic="Azia (Pirose) - Queimação na área do tórax|Desconforto torácico|Regurgitação com dor na garganta|Asma|Tosse persistente"
+                    data-treatment="Perda de peso|Alcoolismo|Tabagismo|Atividade física regular|Evitar se alimentar 3 horas antes de dormir|Elevação da cabeceira da cama em 15cm|Alimentação equilibrada e sem excessos, principalmente com cafeína, bebidas ácidas ou gaseificadas e comidas gordurosas|Dormi virado do lado esquerdo
+">
 
                     <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="flame" class="w-5 h-5 text-gray-500 transition-colors"></i>
+                        <i data-lucide="Split" class="w-5 h-5 text-gray-500 transition-colors"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Refluxo Gastroesofágico</h3>
                     <span
@@ -155,9 +159,10 @@
                     </p>
 
                     <p class="text-gray-600 text-sm mb-4">
-                        <strong class="block text-xs text-red-500 mb-1">TRATAMENTO E PREVENÇÃO</strong>
-                        Uso de antiácidos e medicamentos que reduzem a acidez, mudanças de hábitos alimentares, perda de
-                        peso e evitar deitar após as refeições.
+                        <strong class="block text-xs text-red-500 mb-1">PREVENÇÃO</strong>
+                        Adotar hábitos saudáveis, como manter o peso adequado, evitar álcool e tabaco, praticar
+                        exercícios, não comer antes de dormir, elevar a cabeceira da cama e ter uma alimentação
+                        equilibrada, ajuda a prevenir problemas digestivos.
                     </p>
 
                     <a href="#" class="text-sm text-green-700 font-medium hover:underline">
@@ -170,26 +175,30 @@
                 <!-- GASTRITE -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Gastrite" data-tag="Estômago"
-                    data-image="https://images.unsplash.com/photo-1505253216365-8c8e4e56d9c0"
-                    data-description="Inflamação da mucosa gástrica, podendo ser aguda ou crônica, causada por infecções como Helicobacter pylori, álcool, medicamentos ou estresse."
-                    data-treatment="Uso de antiácidos, erradicação do H. pylori quando presente, controle do estresse, alimentação equilibrada e acompanhamento médico.">
+                    data-image="https://www.mundoboaforma.com.br/wp-content/uploads/2022/04/gastrite.webp"
+                    data-description="A gastrite consiste na inflamação da mucosa gástrica presente no estômago, sendo causada por diversos fatores, como infecções, estresse, lesões no estômago, abuso de bebidas alcoólicas, uso de medicamentos ou distúrbios. Ela pode se manifestar de forma aguda, quando ocorre subitamente, ou de forma crônica, quando persiste por longos períodos de tempo. A inflamação pode apresentar diferentes graus de intensidade e atingir o estômago em sua totalidade ou apenas em algumas partes.
+                    A gastrite infecciosa é a forma mais comum e é decorrente da bactéria Helicobacter pylori. Além disso, também há ocorrências de gastrite provocadas por lesões fora do estômago, como queimaduras extensas na pele, lesões cranianas, lesões que causam hemorragia ou outras doenças graves."
+                    data-prognostic="Dores e desconforto abdominal|Náusea (enjoos), podendo ser intermitente ou não|Vômito, podendo ser intermitente ou não indigestão|Perda de apetite|Inchaço abdominal
+" data-treatment="Evitar uso excessivo de álcool|Tratar infecções pela bactéria Helicobacter pylori (caso seja confirmado)|Dieta alimentar balanceada ajuda a contribuir para a saúde intestinal|Controle do estresse
+">
 
                     <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4"><i
-                            data-lucide="heart-pulse" class="w-5 h-5 text-gray-500 transition-colors"></i></div>
+                            data-lucide="flame" class="w-5 h-5 text-gray-500 transition-colors"></i></div>
                     <h3 class="text-xl font-semibold mb-2">Gastrite</h3>
                     <span
                         class="inline-block text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full mb-4">Estômago</span>
                     <p class="text-gray-600 text-sm mb-4">
                         <strong class="block text-xs text-green-700 mb-1">O QUE É E SINTOMAS</strong>
-                        Inflamação da mucosa do estômago causada por bactérias, uso excessivo de medicamentos
-                        anti-inflamatórios,
-                        estresse ou consumo de álcool.
+                        Gastrite é a inflamação da mucosa do estômago, podendo ser aguda (repentina) ou crônica
+                        (duradoura). Pode ser causada por Helicobacter pylori, álcool, medicamentos, estresse ou lesões
+                        graves, e pode afetar todo ou parte do estômago.
                     </p>
 
                     <p class="text-gray-600 text-sm mb-4">
-                        <strong class="block text-xs text-red-500 mb-1">TRATAMENTO E PREVENÇÃO</strong>
-                        Tratamento com medicamentos que reduzem a acidez estomacal, antibióticos quando indicado
-                        e hábitos saudáveis.
+                        <strong class="block text-xs text-red-500 mb-1">PREVENÇÃO</strong>
+                        A prevenção da gastrite envolve evitar o consumo excessivo de álcool, tratar a infecção por
+                        Helicobacter pylori quando confirmada, manter uma alimentação equilibrada e controlar o
+                        estresse.
                     </p>
 
                     <a href="#" class="text-sm text-green-700 font-medium hover:underline">
@@ -201,26 +210,28 @@
                 <!-- DISENTERIA -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Disenteria" data-tag="Intestino"
-                    data-image="https://images.unsplash.com/photo-1580281657521-3a1b6d7a44cc"
-                    data-description="Doença gastrointestinal caracterizada por diarreia com sangue, muco ou pus, geralmente causada por infecções bacterianas ou amebianas."
-                    data-treatment="Tratamento conforme o agente causador, hidratação intensa, dieta leve e acompanhamento médico em casos graves.">
+                    data-image="https://images.unsplash.com/photo-1580281657521-3a1b6d7a44cc" data-description="Disenteria é uma doença gastrointestinal em que ocorrem episódios diarreicos com presença de sangue, muco e pus, normalmente associado com febre, podendo até ser assintomático ( sem apresentar sintomas ) . As causas mais comuns para disenteria são de origem infecciosa bacteriana ou amebiana, normalmente da ingestão de alimentos e líquidos contaminados, devido a falta da higiene adequada ou ausência de saneamento básico. Outras doenças, como a Síndrome do intestino irritável ou intolerâncias alimentares, também podem desencadear quadros semelhantes à disenteria. 
+" data-prognostic="Presença de sangue nas fezes|Sintomas associadas com desidratação, como boca seca, pele seca e ausência de  lágrimas|Perda de apetite|Dores abdominais|Febre alta ( comum em disenteria bacteriana )|Náusea ( Enjoo ) e Vômito|Perda de peso
+
+" data-treatment="Cuidados com a higiene, sempre lavando as mãos antes e após defecar|Evitar alimentos e bebidas que possam estar contaminados. Sempre lavar frutas e ferver adequadamente os alimentos|Tomar medidas preventivas em corpos de água passíveis de contaminação|Se atentar ao estado do saneamento básico no local de moradia ou em viagens|Cuidado com o compartilhamento de itens de cunho pessoal, como escova de dentes.">
 
                     <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="alert-triangle" class="w-5 h-5 text-gray-500 transition-colors"></i>
+                        <i data-lucide="Speech" class="w-5 h-5 text-gray-500 transition-colors"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Disenteria</h3>
                     <span
                         class="inline-block text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full mb-4">Intestino</span>
                     <p class="text-gray-600 text-sm mb-4">
                         <strong class="block text-xs text-green-700 mb-1">O QUE É E SINTOMAS</strong>
-                        Doença gastrointestinal caracterizada por diarreia com sangue, muco ou pus, cólicas abdominais e
-                        febre.
+                        É uma doença gastrointestinal caracterizada por diarreia com sangue, muco e pus, geralmente com
+                        febre. Normalmente é causada por infecções bacterianas ou amebianas, transmitidas por alimentos
+                        ou água contaminados devido à falta de higiene ou saneamento.
                     </p>
 
                     <p class="text-gray-600 text-sm mb-4">
-                        <strong class="block text-xs text-red-500 mb-1">TRATAMENTO E PREVENÇÃO</strong>
-                        Hidratação intensa, dieta leve, uso de medicamentos conforme o agente causador e acompanhamento
-                        médico em casos graves.
+                        <strong class="block text-xs text-red-500 mb-1">PREVENÇÃO</strong>
+                        Prevenir a disenteria exige boa higiene, cuidado com água e alimentos e atenção ao saneamento
+                        básico.
                     </p>
 
                     <a href="#" class="text-sm text-green-700 font-medium hover:underline">
@@ -233,26 +244,28 @@
                 <!-- VIROSE INTESTINAL -->
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Virose Intestinal" data-tag="Estômago e Intestino"
-                    data-image="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
-                    data-description="Infecção viral do trato gastrointestinal causada por vírus como norovírus e rotavírus, com sintomas autolimitados."
-                    data-treatment="Repouso, hidratação adequada, alimentação leve e controle dos sintomas.">
+                    data-image="https://dranataliamilioligastro.com.br/wp-content/uploads/2024/01/2-1.png"
+                    data-description="A virose gastrointestinal é uma infecção viral que afeta o sistema digestivo, principalmente o estômago e os intestinos. Diferente de infecções bacterianas, a virose gastrointestinal costuma ter sintomas de forma mais leve e uma diarreia líquida, sem a presença de sangue. Seus sintomas perduram poucos dias e a recuperação tende a ser natural. Em alguns casos, o agravamento dos sintomas e a persistência desses por mais de uma semana indica a necessidade de um tratamento médico. Norovírus, Rotavírus e o adenovirus são os principais causadores dessas infecções, que são transmitidas em alimentos contaminados e contato próximo com pessoas contaminadas. O ideal é a prevenção, haja vista que não há muito a se fazer no tratamento, exceto tratar os sintomas, a desidratação e garantir o repouso do paciente. Crianças, idosos e indivíduos com o sistema imunológico comprometido são grupos de risco e devem buscar auxílio médico o mais breve possível. 
+" data-prognostic="Náusea ( Enjoo ) e vômito|Diarreia líquida sem presença de sangue|Febre baixa e calafrios|Mau-estar geral|Dores abdominais|Sensação de cansaço extrema|Muito com ser assintomático ( sem presença de sintomas )"
+                    data-treatment="Higiene básica, como lavar as mãos|Caderneta de vacinação em dia, principalmente para as crianças|Higiene na preparação de alimentos| Mantenha distância de indivíduos infectados e desinfecte superfícies em que estiveram  em contato com o vírus| Evite compartilhar itens de uso pessoal|Cuidados de higiene e planejamento de viagens a locais em que possa haver  a contaminação de vírus, seja por alimento, seja por ocorrências locais.">
 
                     <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="virus" class="w-5 h-5 text-gray-500 transition-colors"></i>
+                        <i data-lucide="biohazard" class="w-5 h-5 text-gray-500 transition-colors"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Virose Intestinal</h3>
                     <span class="inline-block text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full mb-4">Estômago
                         e Intestino</span>
                     <p class="text-gray-600 text-sm mb-4">
                         <strong class="block text-xs text-green-700 mb-1">O QUE É E SINTOMAS</strong>
-                        Infecção viral do trato gastrointestinal, causando diarreia líquida, náuseas, vômitos e
-                        mal-estar.
+                        Virose gastrointestinal é uma infecção viral que causa diarreia líquida e sintomas leves por
+                        poucos dias. É transmitida por alimentos contaminados ou contato com infectados, e o tratamento
+                        é focado em hidratação e repouso, com maior atenção a crianças, idosos e imunossuprimidos.
                     </p>
 
                     <p class="text-gray-600 text-sm mb-4">
-                        <strong class="block text-xs text-red-500 mb-1">TRATAMENTO E PREVENÇÃO</strong>
-                        Repouso, hidratação adequada, alimentação leve e controle dos sintomas até a recuperação
-                        espontânea.
+                        <strong class="block text-xs text-red-500 mb-1">PREVENÇÃO</strong>
+                        A prevenção depende de higiene, vacinação, cuidado com alimentos, evitar contato com infectados
+                        e atenção em viagens.
                     </p>
 
                     <a href="#" class="text-sm text-green-700 font-medium hover:underline">
@@ -266,25 +279,27 @@
                 <div class="card bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition cursor-pointer"
                     data-title="Hérnia Abdominal" data-tag="Parede Abdominal"
                     data-image="https://images.unsplash.com/photo-1550831107-1553da8c8464"
-                    data-description="Protrusão de conteúdo abdominal através de áreas de fraqueza da parede abdominal, sendo a hérnia inguinal a mais comum."
-                    data-treatment="Tratamento depende da gravidade, podendo ser conservador ou cirúrgico conforme avaliação médica.">
+                    data-description="Hérnia abdominal é uma protusão de conteúdo abdominal em locais de fraqueza da parede protetora dos órgãos internos do abdômen, seja devido a fraqueza no tecido mucoso ou muscular. Essa protusão muitas vezes é imperceptível, exceto quando se faz certos movimentos ou atividades diárias, como tossir, no qual essa protrusão se torna visível como uma protuberância . Existem diversos tipos de hérnias abdominais, sendo a mais comum a hérnia inguinal, no qual afeta apenas homens e essa protusão ocorre logo acima do ligamento inguinal. É comum indivíduos que praticam esportes relatarem protuberâncias similares a hérnias, devido a localização, mas o motivo da protuberância é diferente. A hérnia é comum em pacientes acima do peso, constipação crônica, emprego que depende se manter em pé ou com elevação de peso, gravidez ou defeito congênito."
+                    data-prognostic="Inchaço na área|Dor continua ou intermitente" data-treatment="* Cuidados pós-cirúrgicos|Alimentação adequada e equilibrada|Controle do peso|Exercícios físicos regulares|Evitar esforços excessivos, principalmente ocupacionais|Controle postural
+">
 
                     <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="stethoscope" class="w-5 h-5 text-gray-500 transition-colors"></i>
+                        <i data-lucide="user-round-search" class="w-5 h-5 text-gray-500 transition-colors"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Hérnia Abdominal</h3>
                     <span class="inline-block text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full mb-4">Parede
                         Abdominal</span>
                     <p class="text-gray-600 text-sm mb-4">
                         <strong class="block text-xs text-green-700 mb-1">O QUE É E SINTOMAS</strong>
-                        Protrusão de órgãos ou tecidos através de áreas de fraqueza na parede abdominal, podendo causar
-                        dor, desconforto e abaulamento local.
+                        Hérnia abdominal é a protusão de órgãos por pontos fracos da parede abdominal, visível em
+                        esforços como tossir. A mais comum é a inguinal, e os fatores de risco incluem excesso de peso,
+                        constipação, esforço físico, gravidez e defeitos congênitos.
                     </p>
 
                     <p class="text-gray-600 text-sm mb-4">
-                        <strong class="block text-xs text-red-500 mb-1">TRATAMENTO E PREVENÇÃO</strong>
-                        Depende da gravidade: pode ser conservador com acompanhamento médico ou cirúrgico para correção
-                        da hérnia.
+                        <strong class="block text-xs text-red-500 mb-1">PREVENÇÃO</strong>
+                        Prevenção envolve cuidados após cirurgias, alimentação saudável, controle do peso, exercícios,
+                        boa postura e evitar esforços excessivos.
                     </p>
 
                     <a href="#" class="text-sm text-green-700 font-medium hover:underline">
@@ -293,7 +308,11 @@
 
                 </div>
 
-
+            </div>
+            <div>
+                <h1 class="text-center text-red-600 font-bold text-4xl mt-8">
+                    Não faça automedicação, em caso de manifestações de sintomas digestivos, procure um médico.
+                </h1>
             </div>
 
         </div>
@@ -338,11 +357,8 @@
 
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-700">
 
-                        Os principais sinais incluem dor abdominal persistente, azia frequente,
-                        náuseas, vômitos recorrentes, alterações no hábito intestinal (diarreia ou
-                        constipação prolongada), sangue nas fezes, perda de peso inexplicável e
-                        dificuldade para engolir. Se você apresentar qualquer um desses sintomas
-                        por mais de duas semanas, procure um gastroenterologista.
+                        Dor abdominal frequente, azia constante, diarreia ou prisão de ventre persistente, sangue nas
+                        fezes, perda de peso sem motivo e náuseas recorrentes são sinais de alerta.
                     </div>
                 </div>
 
@@ -367,9 +383,9 @@
 
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-700">
 
-                        Uma alimentação equilibrada, rica em fibras, frutas, legumes e água,
-                        contribui para o bom funcionamento do sistema digestório e previne diversas
-                        doenças.
+                        Uma alimentação equilibrada, rica em fibras, frutas, verduras e água, ajuda no bom funcionamento
+                        do intestino. Já o excesso de gorduras, frituras e ultraprocessados pode causar desconfortos
+                        digestivos.
                     </div>
                 </div>
 
@@ -394,8 +410,8 @@
 
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-700">
 
-                        A hidratação adequada facilita a digestão, a absorção de nutrientes e
-                        previne a constipação intestinal.
+                        A água facilita a digestão, ajuda na absorção de nutrientes e previne a prisão de ventre,
+                        mantendo o intestino funcionando corretamente.
                     </div>
                 </div>
 
@@ -420,8 +436,8 @@
 
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-700">
 
-                        Sim. O estresse pode afetar diretamente o funcionamento do sistema digestório,
-                        causando sintomas como dor abdominal, azia e alterações intestinais.
+                        Sim. O estresse pode provocar sintomas como dor abdominal, azia, diarreia, constipação e até
+                        piorar condições como gastrite e síndrome do intestino irritável.
                     </div>
                 </div>
 
@@ -446,8 +462,8 @@
 
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-700">
 
-                        Sempre que os sintomas digestivos forem persistentes, intensos ou afetarem
-                        sua qualidade de vida.
+                        Quando os sintomas digestivos são frequentes, intensos ou persistentes, ou se houver sinais como
+                        sangue nas fezes, dor forte ou perda de peso inexplicável.
                     </div>
                 </div>
 
@@ -472,8 +488,8 @@
 
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-700">
 
-                        Sempre que os sintomas digestivos forem persistentes, intensos ou afetarem
-                        sua qualidade de vida.
+                        Sim, em muitos casos. Eles ajudam a equilibrar a flora intestinal, melhorando o funcionamento do
+                        intestino e fortalecendo a imunidade.
                     </div>
                 </div>
 
@@ -499,8 +515,8 @@
 
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-700">
 
-                        Sempre que os sintomas digestivos forem persistentes, intensos ou afetarem
-                        sua qualidade de vida.
+                        Alimentação saudável, boa hidratação, prática de atividade física, evitar excesso de álcool, não
+                        fumar e controlar o estresse.
                     </div>
                 </div>
 
@@ -525,8 +541,9 @@
 
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-700">
 
-                        Sempre que os sintomas digestivos forem persistentes, intensos ou afetarem
-                        sua qualidade de vida.
+                        A intolerância é uma dificuldade de digestão de determinado alimento, causando desconfortos como
+                        gases e diarreia. Já a alergia envolve o sistema imunológico e pode causar reações mais graves,
+                        como inchaço e dificuldade para respirar.
                     </div>
                 </div>
             </div>
@@ -537,98 +554,212 @@
     <footer class="bg-[#f5f4f1] pt-20 pb-10">
         <div class="max-w-7xl mx-auto px-6">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
 
-                <!-- Brand -->
                 <div class="lg:col-span-1">
                     <div class="flex items-center gap-2 mb-4">
-                        <span class="text-lg font-bold">Sistema Digestório</span>
+                        <div
+                            class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+                            SD</div>
+                        <span class="text-lg font-bold text-gray-800">Sistema Digestório</span>
                     </div>
-
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Nosso objetivo é fornecer informações educativas e confiáveis sobre a
-                        saúde do sistema digestório, ajudando você a entender e prevenir doenças.
+                        Informações educativas baseadas em evidências científicas para ajudar você a entender e prevenir
+                        doenças gastrointestinais.
                     </p>
                 </div>
 
-                <!-- Doenças -->
                 <div>
-                    <h4 class="font-semibold mb-4">DOENÇAS</h4>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="#" class="hover:underline">Gastrite</a></li>
-                        <li><a href="#" class="hover:underline">Refluxo</a></li>
-                        <li><a href="#" class="hover:underline">Úlcera</a></li>
-                        <li><a href="#" class="hover:underline">Colite</a></li>
-                        <li><a href="#" class="hover:underline">Síndrome do Intestino Irritável</a></li>
+                    <h4 class="font-bold text-gray-800 text-sm tracking-wider uppercase mb-4">Doenças</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Gastrite</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Refluxo (DRGE)</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Disenteria</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Viroses</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Hérnias</a></li>
                     </ul>
                 </div>
 
-                <!-- Recursos -->
-                <div>
-                    <h4 class="font-semibold mb-4">RECURSOS</h4>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="#" class="hover:underline">Sobre o Projeto</a></li>
-                        <li><a href="#" class="hover:underline">Fontes de Pesquisa</a></li>
-                        <li><a href="#" class="hover:underline">Glossário Médico</a></li>
-                        <li><a href="#" class="hover:underline">Perguntas Frequentes</a></li>
-                    </ul>
+                <div class="lg:col-span-2">
+                    <h4 class="font-bold text-gray-800 text-sm tracking-wider uppercase mb-4">Fontes & Referências</h4>
+
+                    <div class="space-y-3">
+
+                        <details class="group bg-white rounded-lg border border-gray-200 overflow-hidden">
+                            <summary
+                                class="list-none flex items-center justify-between p-3 cursor-pointer hover:bg-gray-50 transition-colors">
+                                <span class="text-sm font-medium text-gray-700">Refluxo Gastrointestinal</span>
+                                <span class="text-gray-400 transition-transform duration-300 group-open:rotate-180">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="px-3 pb-3 pt-0 bg-gray-50 border-t border-gray-100">
+                                <ul class="mt-2 space-y-2 text-xs text-gray-500">
+                                    <li>
+                                        <a href="https://www.msdmanuals.com/pt/casa/dist%C3%BArbios-digestivos/dist%C3%BArbios-esof%C3%A1gicos-e-de-degluti%C3%A7%C3%A3o/doen%C3%A7a-do-refluxo-gastroesof%C3%A1gico-drge#Sintomas_v754112_pt"
+                                            target="_blank" class="flex items-center gap-2 hover:text-blue-600">
+                                            <span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                                            MSD Manuals: DRGE e Sintomas
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.guilhermenamur.com.br/como-tratar-o-refluxo-gastroesofagico"
+                                            target="_blank" class="flex items-center gap-2 hover:text-blue-600">
+                                            <span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                                            Dr. Guilherme Namur: Como tratar
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10658748/pdf/cureus-0015-00000047420.pdf"
+                                            target="_blank" class="flex items-center gap-2 hover:text-blue-600">
+                                            <span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                                            NCBI / Cureus Article (PDF)
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-lg border border-gray-200 overflow-hidden">
+                            <summary
+                                class="list-none flex items-center justify-between p-3 cursor-pointer hover:bg-gray-50 transition-colors">
+                                <span class="text-sm font-medium text-gray-700">Gastrite</span>
+                                <span class="text-gray-400 transition-transform duration-300 group-open:rotate-180">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="px-3 pb-3 pt-0 bg-gray-50 border-t border-gray-100">
+                                <ul class="mt-2 space-y-2 text-xs text-gray-500">
+                                    <li>
+                                        <a href="https://www.msdmanuals.com/pt/casa/dist%C3%BArbios-digestivos/gastrite-e-%C3%BAlcera-p%C3%A9ptica/gastrite#Causas_v753695_pt"
+                                            target="_blank" class="flex items-center gap-2 hover:text-blue-600">
+                                            <span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                                            MSD Manuals: Causas da Gastrite
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.einstein.br/n/glossario-de-saude/gastrite" target="_blank"
+                                            class="flex items-center gap-2 hover:text-blue-600">
+                                            <span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                                            Hospital Albert Einstein: Glossário
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-lg border border-gray-200 overflow-hidden">
+                            <summary
+                                class="list-none flex items-center justify-between p-3 cursor-pointer hover:bg-gray-50 transition-colors">
+                                <span class="text-sm font-medium text-gray-700">Hérnias Abdominais</span>
+                                <span class="text-gray-400 transition-transform duration-300 group-open:rotate-180">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="px-3 pb-3 pt-0 bg-gray-50 border-t border-gray-100">
+                                <ul class="mt-2 space-y-2 text-xs text-gray-500">
+                                    <li>
+                                        <a href="https://my.clevelandclinic.org/health/diseases/15757-hernia"
+                                            target="_blank" class="flex items-center gap-2 hover:text-blue-600">
+                                            <span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                                            Cleveland Clinic: Hernia Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="group bg-white rounded-lg border border-gray-200 overflow-hidden">
+                            <summary
+                                class="list-none flex items-center justify-between p-3 cursor-pointer hover:bg-gray-50 transition-colors">
+                                <span class="text-sm font-medium text-gray-700">Viroses e Disenteria</span>
+                                <span class="text-gray-400 transition-transform duration-300 group-open:rotate-180">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="px-3 pb-3 pt-0 bg-gray-50 border-t border-gray-100">
+                                <ul class="mt-2 space-y-2 text-xs text-gray-500">
+                                    <li>
+                                        <a href="https://www.mayoclinic.org/diseases-conditions/viral-gastroenteritis/symptoms-causes/syc-20378847"
+                                            target="_blank" class="flex items-center gap-2 hover:text-blue-600">
+                                            <span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                                            Mayo Clinic: Viral Gastroenteritis (Virose)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://my.clevelandclinic.org/health/drugs/23567-dysentery#management-and-treatment"
+                                            target="_blank" class="flex items-center gap-2 hover:text-blue-600">
+                                            <span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                                            Cleveland Clinic: Dysentery (Disenteria)
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+
+                    </div>
                 </div>
-
-                <!-- Contato -->
-                <div>
-                    <h4 class="font-semibold mb-4">CONTATO</h4>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="#" class="hover:underline">Fale Conosco</a></li>
-                        <li><a href="#" class="hover:underline">Sugestões</a></li>
-                        <li><a href="#" class="hover:underline">Parcerias</a></li>
-                        <li><a href="#" class="hover:underline">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-
-                <!-- Form -->
-                <div>
-                    <h4 class="font-semibold mb-4">FALE CONOSCO</h4>
-
-                    <form class="space-y-3">
-                        <input type="email" placeholder="Seu e-mail"
-                            class="w-full border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-600" />
-
-                        <textarea rows="3" placeholder="Sua mensagem (máx. 500 caracteres)"
-                            class="w-full border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
-
-                        <button type="submit"
-                            class="w-full bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 rounded-lg transition">
-                            Enviar Mensagem
-                        </button>
-                    </form>
-                </div>
-
             </div>
 
-            <!-- Bottom -->
-            <div class="border-t pt-6 text-center text-sm text-gray-500">
-                © 2026 Sistema Digestório. Todos os direitos reservados.
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">
+                    © 2026 Mateus Marques Desenvolvedor. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-4">
+                    <!-- GitHub -->
+                    <a href="https://github.com/mateusmarquessz" target="_blank"
+                        class="text-gray-400 hover:text-gray-900 transition-colors">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.3-5.467-1.335-5.467-5.935 0-1.31.467-2.382 1.236-3.222-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.912 1.234 3.222 0 4.61-2.807 5.632-5.48 5.927.43.372.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .32.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/mateusmarquessz" target="_blank"
+                        class="text-gray-400 hover:text-blue-600 transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.787-1.75-1.754 0-.967.784-1.754 1.75-1.754s1.75.787 1.75 1.754c0 .967-.784 1.754-1.75 1.754zm13.5 11.268h-3v-5.604c0-1.337-.026-3.064-1.867-3.064-1.869 0-2.154 1.459-2.154 2.967v5.701h-3v-10h2.881v1.367h.041c.401-.76 1.379-1.562 2.838-1.562 3.034 0 3.594 1.998 3.594 4.594v5.601z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
+
 
         </div>
     </footer>
 
+    <div id="modalOverlay" class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 hidden">
 
-    <div id="modalOverlay" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-2xl max-w-2xl w-full mx-4 relative animate-fadeIn">
+        <div class="bg-white rounded-2xl max-w-2xl w-full mx-4 relative animate-fadeIn max-h-[90vh] overflow-y-auto">
             <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl">✕</button>
 
-            <div class="p-8">
-                <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+            <div class="p-4 sm:p-6 md:p-8">
+                <h2 id="modalTitle" class="text-xl sm:text-2xl font-bold mb-2"></h2>
                 <span id="modalTag"
                     class="inline-block text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full mb-6"></span>
-                <img id="modalImage" class="w-full h-48 object-cover rounded-xl mb-6" />
-
+                <img id="modalImage" class="w-full h-40 sm:h-48 md:h-56 object-cover rounded-xl mb-6" />
                 <h4 class="text-sm font-semibold text-green-700 mb-2">O QUE É</h4>
                 <p id="modalDescription" class="text-gray-600 text-sm mb-6"></p>
-
-                <h4 class="text-sm font-semibold text-green-700 mb-2">TRATAMENTO E PREVENÇÃO</h4>
-                <p id="modalTreatment" class="text-gray-600 text-sm"></p>
+                <h4 class="text-sm font-semibold text-green-700 mb-2">Sintomas</h4>
+                <ul id="modalPrognostic" class="text-gray-600 text-sm list-disc pl-5 space-y-1 mb-6"></ul>
+                <h4 class="text-sm font-semibold text-green-700 mb-2">PREVENÇÃO</h4>
+                <ul id="modalTreatment" class="text-gray-600 text-sm list-disc pl-5 space-y-1"></ul>
             </div>
         </div>
     </div>
